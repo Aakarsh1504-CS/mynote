@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(8, 8, 8);
+}
+#nav,#nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    color: rgb(119, 225, 235);
+}
+#nav2{
+    justify-content: space-between;
+}
+#hero,#hero2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #fff; */
+}
+#hero2{
+    padding: 50px;
+    justify-content: start;
+}
+#register-form{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 30%;
+    padding: 40px;
+    border-radius: 30px 60px;
+    border: 2px solid rgb(119, 225, 235);
+}
+#note-form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+}
+#note-form form{
+    padding: 25px;
+    width: 70%;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+}
+#note-form #submit{
+    width: 20%;
+}
+form input,textarea{
+    height:35px;
+    width: 100%;    
+    outline: none;
+    border-radius: 8px 16px;
+    padding: 4px;
+    background: none;
+    border: 1px solid rgb(119, 225, 235);
+    color: aliceblue;
+}
+textarea{
+    height: 65px;
+}
+#upper{
+    width: 100%;
+    /* background-color: aliceblue; */
+}
+::placeholder{
+    color: rgba(119, 225, 235, 0.966);
+    font-weight: bolder;
+}
+form h1{
+    color: rgb(119, 225, 235);
+}
+#submit{
+    border-radius: 10px 20px;
+    width: 50%;
+    font-size: 18px;
+    padding: 5px 10px;
+    font-weight: bolder;
+    color: black;
+    background: rgb(119, 225, 235);;
+    border: 2px solid rgb(119, 225, 235);
+    cursor: pointer;
+    transition: 200ms;
+}
+#submit:hover{
+    color: rgb(119, 225, 235);
+    background: none;
+    border: 2px solid rgb(119, 225, 235);
+}
+a{
+    text-decoration: none;
+    /* text-decoration: underline; */
+    color: rgb(119, 225, 235);
+    border-bottom: 1px solid rgb(119, 225, 235);
+}
+h3{
+    color: rgb(119, 225, 235);
+}
+#lower{
+    padding: 35px;
+}
+#contents{
+    display: flex;
+    gap: 5px;
+}
+#box,#box2{
+    padding: 15px;
+    background-color: rgb(119, 225, 235);
+    color: black;
+    transition: 200ms;
+    border: 2px solid black;
+    border-radius: 8px 16px;
+}
+#a{
+    color: black;
+    border-bottom: 1px solid black;
+}
+#box:hover{
+    background: none;
+    color: rgb(119, 225, 235);
+    border: 2px solid rgb(119, 225, 235);
+}
+#box:hover #a{
+    color:rgb(119, 225, 235);
+    border-bottom: 1px solid rgb(119, 225, 235);
+}
+#box2{
+    margin-bottom: 10px;
+    background: none;
+    color: rgb(119, 225, 235);
+    border: 2px solid rgb(119, 225, 235);
+}
+#box2 h1,hr{
+    margin-bottom: 10px;
+}
+#links{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+#box2:hover{
+    background-color:rgb(119, 225, 235);
+    color:black
+}
+#box2:hover #a2{
+    color: black;
+    border-bottom: 1px solid black;
+}
+#box2:hover hr{
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+}
+#box2 hr{
+    border-top: 0.5px solid rgb(119, 225, 235);
+    border-bottom: 0.5px solid rgb(119, 225, 235);
+}
+#box p{
+    margin-bottom: 15px;
+}
+#box2 p{
+    margin-bottom: 15px;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    form {
+        width: 50%;
+    }
+    #note-form form {
+        width: 80%;
+    }
+    #note-form #submit {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 70%;
+        padding: 20px;
+    }
+    #note-form form {
+        width: 90%;
+    }
+    #nav, #nav2 {
+        /* flex-direction: column; */
+        font-size: 10px;
+        gap:10px;
+    }
+    #hero, #hero2 {
+        flex-direction: column;
+        padding: 20px;
+    }
+    #submit {
+        width: 70%;
+    }
+    #note-form #submit {
+        width: 50%;
+    }
+    #box, #box2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #contents {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+    }
+    #note-form form {
+        width: 100%;
+    }
+    #submit {
+        width: 90%;
+    }
+    #note-form #submit {
+        width: 70%;
+    }
+}
