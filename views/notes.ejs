@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="nav2">
+            <h1> Welcome <%=owner.name%></h1>
+            <a href="/">LogOut</a>
+        </div>
+        <div id="upper">
+            <div id="note-form">
+                <form action="/createnote" method="post">
+                    <input type="text" maxlength="30" name="title" placeholder="Title">
+                    <textarea name="content" style="resize:none" placeholder="Content"></textarea>
+                    <input id="submit" type="submit" value="Create">
+                </form>
+            </div>
+        </div>
+    <div id="lower">
+        <div id="contents">
+            <% if(owner.notes.length>0){ %>
+            <%   owner.notes.forEach((val)=>{ %>
+                    <div id="box">
+                        <h1><%=val.title%></h1>
+                        <div id="links">
+                            <a id="a" href="/show/<%=val.title%>">Show Full</a>
+                        </div>
+                    </div>
+            <%   }) %>
+            <% } else { %>
+                <h3>No Notes By You</h3>
+            <% } %>
+        </div>
+    </div>
+    </div>
+    
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

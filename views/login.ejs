@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <h1>Welcome To Your Personal Note Taking App</h1>
+        </div>
+        <div id="hero">
+                <div id="register-form">
+                    <form action="/login" method="post">
+                        <h1>Login</h1>
+                        <input type="email" required name="email" placeholder="Email address">
+                        <input type="password" required name="pass" placeholder="Password">
+                        <input id="submit" type="submit" value="Login">
+                        <div id="take" style="display:flex; gap: 6px; color:rgb(119, 225, 235);">
+                            <p>New User? </p>
+                            <a href="/"> Sign Up Here</a>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

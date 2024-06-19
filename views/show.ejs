@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="nav2">
+            <a href="/profile">Back</a>
+            <a href="/delete/<%=rpost.title%>">Delete</a>
+            <a href="/">LogOut</a>
+        </div>
+        <div id="hero2">
+            <div id="box2">
+                <div id="links">
+                    <h1><%=rpost.title%></h1>
+                    <a id="a2" href="/rename/<%=rpost.title%>">Rename</a>
+                </div>
+                <hr>
+                <p><%=rpost.content%></p>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

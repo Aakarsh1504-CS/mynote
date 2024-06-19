@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="nav2" style="display:flex; gap:5px;">
+            <a href="/show/<%=rpost.title%>">Back</a>
+            <a href="/delete/<%=rpost.title%>">Delete</a>
+            <a href="/">LogOut</a>
+        </div>
+        <div id="register-form">
+            <form action="/rename/<%=rpost.title%>" method="post">
+                <input type="text" disabled value="<%=rpost.title%>">
+                <input type="text" maxlength="30" placeholder="New Name" name="newname">
+                <input id="submit" type="submit" value="Rename">
+            </form>
+        </div>
+    </div>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
